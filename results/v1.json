@@ -1,0 +1,816 @@
+{
+  "summary": {
+    "version": "v1",
+    "model": "openai/gpt-oss-20b",
+    "total": 40,
+    "accuracy": 0.975,
+    "humanReviewRate": 0.675,
+    "invalidOutputs": 0,
+    "retriesUsed": 2,
+    "perCategory": {
+      "interested": {
+        "total": 8,
+        "correct": 8
+      },
+      "not_interested": {
+        "total": 8,
+        "correct": 8
+      },
+      "question": {
+        "total": 8,
+        "correct": 8
+      },
+      "out_of_office": {
+        "total": 8,
+        "correct": 8
+      },
+      "unsubscribe": {
+        "total": 8,
+        "correct": 7
+      }
+    },
+    "misclassified": [
+      {
+        "id": 39,
+        "expected": "unsubscribe",
+        "got": "not_interested"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": 1,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": "$800",
+          "email": null,
+          "availability": "first two weeks of December"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "draft_mentions_price"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 2,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": "maya.fake@example.com",
+          "availability": null
+        },
+        "draft": "Hi Maya,\n\nThank you for your interest! We’ll send the brief over shortly. If you have any questions in the meantime, feel free to let us know.\n\nBest regards,\n[Your Name]",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 3,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for your enthusiasm! We're excited to have you on board. Could you let us know your preferred dates next month so we can schedule? Looking forward to collaborating!",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 4,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": "$350 per Instagram reel",
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for reaching out! We're thrilled to hear you're interested in a sponsored post. Could you share your availability and any additional details? Looking forward to collaborating.",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 5,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "any weekday after 3pm"
+        },
+        "draft": "Thank you for your interest! We'll send you the details shortly. Looking forward to collaborating with you.",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 6,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for reaching out! We’re excited to collaborate with you. Could you share your rates and availability so we can discuss the next steps?",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 7,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": "leo.fake@example.com",
+          "availability": "Tuesday"
+        },
+        "draft": "Great, thanks! I've scheduled a call for Tuesday and sent the invite to your email.",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 8,
+      "label": "interested",
+      "predicted": "interested",
+      "result": {
+        "category": "interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": "$1,200 for three posts",
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for your response! I'm excited about the possibility of working together. Could you let me know your availability and any specific requirements you have in mind? Looking forward to collaborating.",
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 9,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 10,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 11,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 12,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 13,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 14,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 15,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 16,
+      "label": "not_interested",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 17,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for reaching out! I'd be happy to share details on the deliverables and the duration of usage rights. Please let me know if you have any specific requirements or timelines in mind.",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 18,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for your interest! We’re a media company focused on X, and we’ve partnered with creators like Y and Z. I’d love to share more details—when would be a good time to chat?",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 19,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Hi there,\n\nThanks for reaching out! Could you let me know what budget range you have in mind for this project? That way I can determine if it aligns with my rates and availability.\n\nLooking forward to your reply.\n\nBest regards,\n[Your Name]",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 2
+      }
+    },
+    {
+      "id": 20,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Hi there,\n\nThanks for reaching out! We ship the product first and then proceed with the paid post. The deadline for the post is typically 7 days after the product arrives. Let me know if you need any more details.\n\nBest regards,\n[Your Name]",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 2
+      }
+    },
+    {
+      "id": 21,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for your interest! Our partnership is non‑exclusive, so you’re free to work with other creators. Let me know if you have any other questions.",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 22,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Hi there,\n\nThanks for reaching out. I’m [Your Name] from [Your Company]. We found your contact information through [source] and would love to discuss how we can help you. If you’d prefer not to receive further emails, just let me know and we’ll remove you from our list.\n\nBest regards,\n[Your Name]",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 23,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for reaching out! Our campaign is available on both TikTok and YouTube. We can provide a script if you’d like. Please let us know which platform you prefer and any specific details you need.",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 24,
+      "label": "question",
+      "predicted": "question",
+      "result": {
+        "category": "question",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": "Thank you for reaching out! We typically operate on a net‑30 basis, but we’re happy to discuss upfront payment if that works better for you. Let me know what you prefer.",
+        "needsHuman": true,
+        "reasons": [
+          "needs_answer_from_human"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 25,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "November 18"
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 26,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "3rd"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 27,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "January 10"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 28,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.95,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "until next Monday"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 29,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "attending a conference this week"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 30,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "Dec 2"
+        },
+        "draft": null,
+        "needsHuman": false,
+        "reasons": [],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 31,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "offline for the holidays through January 5th"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 32,
+      "label": "out_of_office",
+      "predicted": "out_of_office",
+      "result": {
+        "category": "out_of_office",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": "closed for the week, will answer on Monday"
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 33,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 34,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 35,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 36,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 37,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 38,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 39,
+      "label": "unsubscribe",
+      "predicted": "not_interested",
+      "result": {
+        "category": "not_interested",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    },
+    {
+      "id": 40,
+      "label": "unsubscribe",
+      "predicted": "unsubscribe",
+      "result": {
+        "category": "unsubscribe",
+        "confidence": 0.99,
+        "extracted": {
+          "rate": null,
+          "email": null,
+          "availability": null
+        },
+        "draft": null,
+        "needsHuman": true,
+        "reasons": [
+          "unexpected_draft"
+        ],
+        "attempts": 1
+      }
+    }
+  ]
+}
