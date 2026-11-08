@@ -52,6 +52,7 @@ What went wrong (from `misclassified` in the results files):
 
 - v1 misclassified reply 39 (`unsubscribe` predicted as `not_interested`).
 - v2 misclassified reply 18 (`question` predicted as `interested`).
+- v1 flagged many otherwise correct replies for human review because its shorter prompt produced lower-confidence outputs and more safety-check failures, especially for questions, out-of-office replies, and unsubscribe requests.
 
 ## Limitations
 
