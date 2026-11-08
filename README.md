@@ -41,8 +41,6 @@ Results are written to `results/` (ignored by git); copy the numbers below.
 
 ## Results
 
-Fill this in from your real runs. Do not estimate.
-
 | Prompt | Model | Accuracy | Human-review rate | Invalid outputs | Retries used |
 |--------|-------|----------|-------------------|-----------------|--------------|
 | v1 (short) | `openai/gpt-oss-20b` | 0.975 | 0.675 | 0 | 2 |
@@ -52,7 +50,7 @@ What went wrong (from `misclassified` in the results files):
 
 - v1 misclassified reply 39 (`unsubscribe` predicted as `not_interested`).
 - v2 misclassified reply 18 (`question` predicted as `interested`).
-- v1 flagged many otherwise correct replies for human review because its shorter prompt produced lower-confidence outputs and more safety-check failures, especially for questions, out-of-office replies, and unsubscribe requests.
+- v1's 67.5% human-review rate was driven mainly by `unexpected_draft` (18 replies), where drafts were produced for categories that should not receive one; another 8 replies had `needs_answer_from_human`.
 
 ## Limitations
 
